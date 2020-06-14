@@ -1,0 +1,101 @@
+.staff{
+    .aside{
+        width: 70vw;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+        // clip-path: polygon(5% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 3% 53%);
+        // clip-path: polygon(5% 0, 100% 0, 100% 100%, 50% 100%, 5% 100%, 15% 50%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:0% 50%;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.39),rgba(0, 0, 0, 0.692)), url('https://cdn.pixabay.com/photo/2018/03/15/13/12/bitcoin-3228194_1280.jpg');    }
+    .login-box{        
+        padding-left: 50px;
+        width: 35vw;
+        min-width: 300px;
+        font-family: sans-pro-black,mont-med;
+        &>*{
+            margin-bottom:30px;
+        }
+        h2{
+           font-weight: 800;
+            font-size: 50px;
+            padding-bottom: 20px;
+            align-self: flex-start;
+            text-align: left;
+        }
+        p{
+            font-family: mont-med, sans-pro,sans-serif ;
+            font-size: 18px;
+            line-height: 1.3;
+        }
+        
+        .icon{
+            margin-right: 20px;
+            font-size: 22px;
+            width: 25px;
+        }
+       
+        input{
+            font-family: sans-pro-black,mont-med;
+            background-color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-left: 10px;
+            flex-grow: 2;
+        }
+        .input-user{
+            margin-bottom: 20px;
+        }
+        button{
+
+            padding: 15px 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            &.register{
+                color: white;
+                font-size: 18px;
+                background-color:$clr-logo;
+                border: 2px solid white;
+                &+div{
+                    font-family: sans-pro,mont-reg,sans-serif;
+                    margin-top: 15px;
+                    .signIn-btn{
+                        color: $clr-logo;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .checkbox-wrapper{
+            font-family: sans-pro,mont-reg,sans-serif;
+            [type="checkbox"]{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:850px){
+    .staff{
+        flex-direction: column;
+        .login-box{
+            order: 2;
+            padding:0px 30px;
+            width: 100vw;
+            h2{
+                font-size: 30px;
+                font-family: openSans,lato,mont,sans-serif;
+             }
+             
+        }
+        .aside{
+            order: 1;
+            width: 100vw;
+            clip-path: none;
+            height: 50vh;
+        }
+    }
+}

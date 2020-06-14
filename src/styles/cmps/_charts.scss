@@ -1,0 +1,71 @@
+.chartsPage{
+
+    .charts-header{
+        width: 100vw;
+        height: 60vh;
+        font-family: sans-pro,mont-reg,sans-serif;
+        text-align: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:50% 50%;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.609),rgba(0, 0, 0, 0.294)), url('https://cdn.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg');
+
+    }
+    h1{
+        letter-spacing: 2px;
+    }
+    h2{
+        font-size: 30px;
+        align-self: flex-start;
+        color: $clr-logo;
+    }
+    .charts-content h2{
+        margin-bottom: 40px;
+    }
+    .wrapper{
+        width: 100%;
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+}
+
+.custom-tooltip{
+    background-color: rgb(26, 26, 26);
+    padding: 20px;
+    color: wheat;
+}
+
+.charts-resp-container {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    margin: 0px;
+    padding: 0px;
+  }
+  
+
+
+@media (max-width:650px){
+    .chartsPage h2{
+        font-size: 18px;
+        color: white;
+        font-family: sans-pro,mont-reg,sans-serif;
+        margin-left: 10px;
+    }
+    .chartsPage .charts-header{
+        height: 50vh;
+
+    }
+    .charts-content{
+        border-top: $border-main;
+        background-color: $clr-main-mobile;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.151)), url('https://cdn.pixabay.com/photo/2014/06/16/23/39/black-370118_1280.png');
+
+    }
+    .chartsPage .wrapper{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .charts-content.container{
+        padding: 0px;
+    }
+}

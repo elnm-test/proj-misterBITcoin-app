@@ -1,0 +1,50 @@
+.move-preview{
+    padding: 10px;
+    font-family: sans-pro,mont-reg,sans-serif;
+    font-size: 15px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.822);
+    color: black;
+    .bitcoin{
+        color: $clr-logo;
+    }
+    .usd{
+        color: $clr-move-history;
+    }
+    .Approved{
+        color: $clr-confirm;
+    }
+    .Rejected{
+        color: red;
+    }
+    .date-wrapper{
+        color: $clr-move-history;
+
+    }
+}
+
+.move-list-wrapper{
+    padding: 0px;
+}
+
+.move-list-wrapper > :nth-child(odd){
+    background-color: $clr-home-input;
+}
+
+
+.move-preview-other{
+    background-color: white;
+    font-size: 15px;
+}
+
+@media (max-width:970px){
+    .move-preview{
+        border-bottom:1px solid rgba(255, 255, 255, 0.288);
+        color: rgb(255, 255, 255);
+    }    
+    .move-list-wrapper > :nth-child(odd){
+        background-color: $clr-main-mobile;
+    }
+    .move-list-wrapper > :nth-child(even){
+        background-color: $clr-header;
+    }
+}

@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import HomePage from './views/HomePage'
+import Navbar from './components/Navbar'
+import ContactPage from './views/ContactPage'
+import ContactDetailsPage from './views/ContactDetailsPage'
+import StatisticPage from './views/StatisticPage'
+import ContactEditPage from './components/ContactEditPage'
+import Signup from './views/Signup'
+import MoveList from './components/MoveList'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/contact" component={ContactPage}></Route>
+        <Route exact path="/contact/edit/:id?" component={ContactEditPage}></Route>
+        <Route exact path="/contact/:id" component={ContactDetailsPage}></Route>
+        <Route exact path="/statistic" component={StatisticPage}></Route>
+        <Route exact path="/signup" component={Signup}></Route>
+        <Route exact path="/moves" component={MoveList}></Route>
+      </Switch>
     </div>
   );
 }

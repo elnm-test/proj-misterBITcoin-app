@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import './styles/global.scss'
 import * as serviceWorker from './serviceWorker';
+import { HashRouter as Router } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+import './services/utilService'
+import ScrollToTop from './components/ScrollToTop'
+const history = createBrowserHistory()
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={history} basename='/'>
+      <ScrollToTop>
+        <App />     
+      </ScrollToTop>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

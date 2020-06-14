@@ -1,0 +1,179 @@
+.homepage, .homepage-mobile{
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.651),rgba(0, 0, 0, 0.603)), url('https://cdn.pixabay.com/photo/2018/01/15/09/35/bitcoin-3083578_1280.jpg');
+}
+
+button.btn-home, a.btn-home{
+    font-family: sans-pro;
+    font-size: 18px;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &.login{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        background-color: $clr-logo;
+    }
+    &.register{
+        color: white;
+        background-color:rgba(255, 255, 255, 0);
+        border: 1.5px solid white;
+    }
+}
+.homepage-content{
+
+    max-width: 70%;
+    height: 100%;
+    padding-top: 120px;
+    padding-left: $pl-base;
+    color: white;
+    margin: 0px;
+    & > * {
+        margin-bottom: 40px;
+    }
+     
+    p{
+        font-family: mont-med;
+        font-size: 20px;
+        line-height: 1.5;
+        width: 70%;
+        min-width: 400px;
+        color: white;
+        margin-bottom: 60px;
+    }
+    .login-box{        
+        width: 70%;
+        min-width: 300px;
+        .icon{
+            margin-right: 20px;
+            font-size: 30px;
+            width: 25px;
+            color: white;
+            
+        }
+        input{
+            font-family: sans-pro-black;
+            font-size: 16px;
+            width: 80%;
+            max-width: 430px;
+            height: 45px;
+            padding:20px;
+            padding-left: 10px;
+            border: none;
+            background-color: $clr-home-input;
+            border-radius: 30px;
+            border-top: none;
+        }
+        .input-user{
+            margin-bottom: 15px;
+        }
+        .login-btns{
+            margin-top: 40px;
+        }
+
+    }
+}
+
+.user-info{
+    h1{
+     font-size: 30px;
+     font-family:sans-pro-black,sans-serif;
+     margin: 0;
+     margin-bottom: 10px;
+     color: $clr-logo;
+    }
+    h3{
+        padding-bottom: 5px;
+        letter-spacing: 1px;
+    }
+    .user-data{
+        width: 500px;
+        font-size: 20px;
+        font-family: mont-med,sans-pro,sans-serif;
+        .user-data-currency :first-child{
+            margin-bottom: 15px;
+        }
+        span{
+            margin-right: 10px;
+            &.span-title{
+                font-size: 14px;
+                font-family: sans-pro;
+                color: $clr-confirm;
+            }
+        }
+        .icon{
+            margin: 0px 10px;
+        }
+    }
+    .btn-logout{
+        margin-top:30px;
+        background-color: rgba(245, 222, 179, 0);
+        border: 2px solid white;
+    }
+    .btn-history{
+        margin-left: 20px;
+        color: $clr-logo;
+        font-family: sans-pro,mont-reg,sans-serif;        
+    }
+}
+
+@media (max-width:650px){
+    .homepage{
+        background-position:60% 50%;
+    }
+
+    button.btn-home, a.btn-home{
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .homepage-content{
+        padding-left: 30px;
+        max-width: 100%;
+        p{
+            font-size: 18px;
+            padding-right: 10px;
+            min-width:  200px;
+            width: 80%;
+        }
+        .login-box{
+            min-width: 200px;
+            width: 100%;
+            .login-btns{
+                margin-top: 60px;
+            }
+        }
+    }
+    .user-info{
+            .balance-container{
+                width: 100%;
+        }
+        .btn-logout{
+            margin: 0px;
+        }
+        .user-data{
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+
+    .user-data-btn-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .btn-logout.btn-home, .btn-history.btn-home{
+        font-size: 14px;
+    }
+}

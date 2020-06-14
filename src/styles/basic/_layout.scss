@@ -1,0 +1,23 @@
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 960px;
+}
+
+.base-padding-top{
+    padding-top: 60px;
+}
+
+
+.title{
+    font-family: sans-pro-black;
+    font-size: calc(36px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
+    margin-top: 0;
+    color: white;
+}  
+
+@media (max-width:600px){
+    .contactPage, .contact-details-hero, .movelist-hero{
+        height: 30vh;
+    }
+}
